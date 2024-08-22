@@ -6,10 +6,10 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Install modules
-        run: yarn  
+      - name: Install deps
+        run: npm ci
       - name: Run ESLint
-        run: eslint --ext .jsx --fix src
+        run: npm run lint
       
   # test:
   #   runs-on: ubuntu-latest
